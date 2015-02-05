@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+ <script src="angular.js"></script>
+</head>
+
+<body>
+	<div ng-app="myapp">
+ 	<section ng-controller="mycon">
+  		<h1>{{"Hello "+name}}</h1>
+  		<h3>{{"My Position is "+person.position}}</h3>
+  		<h4>{{"My age is "+person.age}}</h4>
+  </section>
+  
+  <section ng-controller="mycon1">
+  		<h1>{{"Calling data from an array "+suc[1]}}</h1>
+  </section>
+ </div>
+
+ <script>
+var x=angular.module("myapp",[])
+x.controller("mycon",function($scope)
+{
+$scope.name="Anandhi";
+$scope.person={position:"UI Developer",age:28};
+
+})		
+
+x.controller("mycon1",yyy)
+function yyy($scope){
+	
+	$scope.suc=["fes","SUCCESS",8];
+}
+</script>
+ 
+</body>
+</html>
